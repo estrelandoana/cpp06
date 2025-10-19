@@ -1,24 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 23:35:00 by codespace         #+#    #+#             */
-/*   Updated: 2025/10/12 23:46:19 by codespace        ###   ########.fr       */
+/*   Created: 2025/10/19 20:47:55 by codespace         #+#    #+#             */
+/*   Updated: 2025/10/19 20:47:57 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE_HPP
-# define BASE_HPP
-# include <iostream>
-# include <cstdlib>
-# include <ctime>
+#include "Base.hpp"
 
-class Base {
-    public:
-        virtual ~Base();
-};
-
-#endif
+Base::~Base() {}

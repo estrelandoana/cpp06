@@ -6,13 +6,14 @@
 #    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/12 23:33:27 by codespace         #+#    #+#              #
-#    Updated: 2025/10/13 00:14:25 by codespace        ###   ########.fr        #
+#    Updated: 2025/10/19 20:48:39 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Base
 
-SRC = main.cpp
+SRC = main.cpp \
+	Base.cpp
 
 OBJS = $(SRC:.cpp=.o)
 

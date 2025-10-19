@@ -6,7 +6,7 @@
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 23:45:16 by codespace         #+#    #+#             */
-/*   Updated: 2025/10/13 00:14:02 by codespace        ###   ########.fr       */
+/*   Updated: 2025/10/19 20:54:45 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,54 +14,50 @@
 #include "B.hpp"
 #include "C.hpp"
 
-Base* generate (void) {
-    std::srand(std::time(0));
+Base* generate(void) {
     int r = std::rand() % 3;
-
-    if (r == 0){
-        std::cout << "A instaced\n" << std::endl;
-        return new A();
-    } else if (r == 1) {
-        std::cout << "B instanced\n" << std::endl;
-        return new B();
-    } else {
-        std::cout << "C instanced\n" << std::endl;
-        return new C();
-    }
+    if (r == 0) return new A();
+    if (r == 1) return new B();
+    return new C();
 }
 
-void identify (Base* ptr) {
-    if (dynamic_cast<A*>(ptr))
-        std::cout << "A" << std::endl;
-    else if (dynamic_cast<B*>(ptr))
-        std::cout << "B" << std::endl;
-    else if (dynamic_cast<C*>(ptr))
-        std::cout << "C" << std::endl;
+void identify(Base* p) {
+    if (dynamic_cast<A*>(p)) std::cout << "A" << std::endl;
+    else if (dynamic_cast<B*>(p)) std::cout << "B" << std::endl;
+    else if (dynamic_cast<C*>(p)) std::cout << "C" << std::endl;
+    else std::cout << "Unknown" << std::endl;
 }
 
-void identify (Base& ptr) {
+void identify(Base& p) {
     try {
-        (void)dynamic_cast<A&>(ptr);
+        (void)dynamic_cast<A&>(p);
         std::cout << "A" << std::endl;
         return;
-    } catch (std::exception&) {}
+    } catch (...) {}
 
     try {
-        (void)dynamic_cast<B&>(ptr);
+        (void)dynamic_cast<B&>(p);
         std::cout << "B" << std::endl;
         return;
-    } catch (std::exception&) {}
+    } catch (...) {}
 
     try {
-        (void)dynamic_cast<C&>(ptr);
+        (void)dynamic_cast<C&>(p);
         std::cout << "C" << std::endl;
         return;
-    } catch (std::exception&) {}
+    } catch (...) {}
+
+    std::cout << "Unknown" << std::endl;
 }
 
 int main() {
-    Base* ptr = generate();
-    identify(ptr);
-    identify(*ptr);
-    delete ptr;
+    std::srand(static_cast<unsigned int>(std::time(NULL)));
+
+    for (int i = 0; i < 5; ++i) {
+        Base* p = generate();
+        identify(p);
+        identify(*p);
+        delete p;
+    }
+    return 0;
 }
