@@ -12,6 +12,7 @@
 
 #ifndef SERIALIZER_HPP
 # define SERIALIZER_HPP
+# include <stdint.h>
 # include <iostream>
 # include "Data.hpp"
 
@@ -23,8 +24,8 @@ class Serializer {
         ~Serializer();
 
     public:
-        static unsigned long serialize(Data* ptr);
-        static Data* deserialize(unsigned long raw);
+        static uintptr_t serialize(Data* ptr);
+        static Data* deserialize(uintptr_t raw);
 };
 
 #endif
