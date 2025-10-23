@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: apaula-l <apaula-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 01:55:25 by codespace         #+#    #+#             */
-/*   Updated: 2025/10/19 21:16:24 by codespace        ###   ########.fr       */
+/*   Created: 2025/10/01 01:55:25 by apaula-l          #+#    #+#             */
+/*   Updated: 2025/10/22 19:00:56 by apaula-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ScalarConverter {
         ScalarConverter();
         ScalarConverter(const ScalarConverter&);
         ScalarConverter& operator=(const ScalarConverter&);
+        ~ScalarConverter();
 };
 
 #endif

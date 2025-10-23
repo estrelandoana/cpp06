@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: apaula-l <apaula-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 02:00:46 by codespace         #+#    #+#             */
-/*   Updated: 2025/10/19 21:16:17 by codespace        ###   ########.fr       */
+/*   Created: 2025/10/01 02:00:46 by apaula-l          #+#    #+#             */
+/*   Updated: 2025/10/21 21:05:01 by apaula-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
-#include <iostream> // ADICIONADO
+#include <iostream>
 
 int main(int argc, char** argv) {
     if (argc != 2) {

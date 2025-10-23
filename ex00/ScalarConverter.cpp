@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: apaula-l <apaula-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 01:59:01 by codespace         #+#    #+#             */
-/*   Updated: 2025/10/19 21:08:42 by codespace        ###   ########.fr       */
+/*   Created: 2025/10/01 01:59:01 by apaula-l          #+#    #+#             */
+/*   Updated: 2025/10/21 21:05:28 by apaula-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include <cstring>
 #include <cmath>
 #include <cctype>
-#include <sstream> // std::ostringstream
+#include <sstream>
 
 static bool isCharLiteral(const std::string& s) {
     return s.length() == 1 && !std::isdigit(static_cast<unsigned char>(s[0]));
